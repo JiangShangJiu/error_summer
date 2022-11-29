@@ -1,0 +1,1129 @@
+nvidia-installer log file '/var/log/nvidia-installer.log'
+creation time: Tue Nov 29 14:51:02 2022
+installer version: 515.86.01
+
+PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+
+nvidia-installer command line:
+    ./nvidia-installer
+    -no-x-check
+
+Using: nvidia-installer ncurses v6 user interface
+-> Detected 16 CPUs online; setting concurrency level to 16.
+-> The file '/tmp/.X0-lock' exists and appears to contain the process ID '1240' of a running X server.
+-> Continuing per the '--no-x-check' option.
+-> Installing NVIDIA driver version 515.86.01.
+-> There appears to already be a driver installed on your system (version: 515.86.01).  As part of installing this driver (version: 515.86.01), the existing driver will be uninstalled.  Are you sure you want to continue? (Answer: Continue installation)
+-> An alternate method of installing the NVIDIA driver was detected. (This is usually a package provided by your distributor.) A driver installed via that method may integrate better with your system than a driver installed by nvidia-installer.
+
+Please review the message provided by the maintainer of this alternate installation method and decide how to proceed:
+
+The NVIDIA driver provided by Ubuntu can be installed by launching the "Software & Updates" application, and by selecting the NVIDIA driver from the "Additional Drivers" tab.
+
+
+(Answer: Continue installation)
+-> Performing CC sanity check with CC="/usr/bin/cc".
+-> Performing CC check.
+-> Kernel source path: '/lib/modules/5.9.1-rt20/build'
+-> Kernel output path: '/lib/modules/5.9.1-rt20/build'
+-> Performing Compiler check.
+-> Performing Dom0 check.
+-> Performing Xen check.
+-> Performing PREEMPT_RT check.
+-> Performing vgpu_kvm check.
+-> Cleaning kernel module build directory.
+   executing: 'cd ./kernel; /usr/bin/make -k -j16 clean NV_EXCLUDE_KERNEL_MODULES="" SYSSRC="/lib/modules/5.9.1-rt20/build" SYSOUT="/lib/modules/5.9.1-rt20/build"'...
+   rm -f -r conftest
+   make[1]: Entering directory '/usr/src/linux-headers-5.9.1-rt20'
+   make[1]: Leaving directory '/usr/src/linux-headers-5.9.1-rt20'
+-> Building kernel modules
+   executing: 'cd ./kernel; /usr/bin/make -k -j16  NV_EXCLUDE_KERNEL_MODULES="" SYSSRC="/lib/modules/5.9.1-rt20/build" SYSOUT="/lib/modules/5.9.1-rt20/build"'...
+   make[1]: Entering directory '/usr/src/linux-headers-5.9.1-rt20'
+   scripts/Makefile.lib:8: 'always' is deprecated. Please use 'always-y' instead
+     SYMLINK /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-kernel.o
+     SYMLINK /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-modeset/nv-modeset-kernel.o
+    CONFTEST: hash__remap_4k_pfn
+    CONFTEST: set_pages_uc
+    CONFTEST: list_is_first
+    CONFTEST: set_memory_uc
+    CONFTEST: set_memory_array_uc
+    CONFTEST: set_pages_array_uc
+    CONFTEST: ioremap_cache
+    CONFTEST: ioremap_wc
+    CONFTEST: sg_alloc_table
+    CONFTEST: pci_get_domain_bus_and_slot
+    CONFTEST: get_num_physpages
+    CONFTEST: efi_enabled
+    CONFTEST: pde_data
+    CONFTEST: proc_remove
+    CONFTEST: pm_vt_switch_required
+    CONFTEST: xen_ioemu_inject_msi
+    CONFTEST: phys_to_dma
+    CONFTEST: get_dma_ops
+    CONFTEST: dma_attr_macros
+    CONFTEST: dma_map_page_attrs
+    CONFTEST: write_cr4
+    CONFTEST: of_get_property
+    CONFTEST: of_find_node_by_phandle
+    CONFTEST: of_node_to_nid
+    CONFTEST: pnv_pci_get_npu_dev
+    CONFTEST: of_get_ibm_chip_id
+    CONFTEST: pci_bus_address
+    CONFTEST: pci_stop_and_remove_bus_device
+    CONFTEST: pci_remove_bus_device
+    CONFTEST: register_cpu_notifier
+    CONFTEST: cpuhp_setup_state
+    CONFTEST: dma_map_resource
+    CONFTEST: get_backlight_device_by_name
+    CONFTEST: timer_setup
+    CONFTEST: pci_enable_msix_range
+    CONFTEST: kernel_read_has_pointer_pos_arg
+    CONFTEST: kernel_write
+    CONFTEST: kthread_create_on_node
+    CONFTEST: of_find_matching_node
+    CONFTEST: dev_is_pci
+    CONFTEST: dma_direct_map_resource
+    CONFTEST: tegra_get_platform
+    CONFTEST: tegra_bpmp_send_receive
+    CONFTEST: flush_cache_all
+    CONFTEST: vmf_insert_pfn
+    CONFTEST: jiffies_to_timespec
+    CONFTEST: ktime_get_raw_ts64
+    CONFTEST: ktime_get_real_ts64
+    CONFTEST: full_name_hash
+    CONFTEST: hlist_for_each_entry
+    CONFTEST: pci_enable_atomic_ops_to_root
+    CONFTEST: vga_tryget
+    CONFTEST: pgprot_decrypted
+    CONFTEST: cc_mkdec
+    CONFTEST: iterate_fd
+    CONFTEST: seq_read_iter
+    CONFTEST: sg_page_iter_page
+    CONFTEST: unsafe_follow_pfn
+    CONFTEST: drm_gem_object_get
+    CONFTEST: drm_gem_object_put_unlocked
+    CONFTEST: set_close_on_exec
+    CONFTEST: add_memory_driver_managed
+    CONFTEST: device_property_read_u64
+    CONFTEST: devm_of_platform_populate
+    CONFTEST: of_dma_configure
+    CONFTEST: of_property_count_elems_of_size
+    CONFTEST: of_property_read_variable_u8_array
+    CONFTEST: i2c_new_client_device
+    CONFTEST: i2c_unregister_device
+    CONFTEST: of_get_named_gpio
+    CONFTEST: devm_gpio_request_one
+    CONFTEST: gpio_direction_input
+    CONFTEST: gpio_direction_output
+    CONFTEST: gpio_get_value
+    CONFTEST: gpio_set_value
+    CONFTEST: gpio_to_irq
+    CONFTEST: icc_get
+    CONFTEST: icc_set_bw
+    CONFTEST: icc_put
+    CONFTEST: dma_buf_export_args
+    CONFTEST: dma_buf_ops_has_kmap
+    CONFTEST: dma_buf_ops_has_kmap_atomic
+    CONFTEST: dma_buf_ops_has_map
+    CONFTEST: dma_buf_ops_has_map_atomic
+    CONFTEST: dma_buf_has_dynamic_attachment
+    CONFTEST: dma_buf_attachment_has_peer2peer
+    CONFTEST: dma_set_mask_and_coherent
+    CONFTEST: get_task_ioprio
+    CONFTEST: address_space_init_once
+    CONFTEST: vzalloc
+    CONFTEST: wait_on_bit_lock_argument_count
+    CONFTEST: bitmap_clear
+    CONFTEST: usleep_range
+    CONFTEST: radix_tree_empty
+    CONFTEST: radix_tree_replace_slot
+    CONFTEST: pnv_npu2_init_context
+    CONFTEST: cpumask_of_node
+    CONFTEST: ioasid_get
+    CONFTEST: migrate_vma_setup
+    CONFTEST: acpi_video_backlight_use_native
+    CONFTEST: drm_dev_unref
+    CONFTEST: drm_reinit_primary_mode_group
+    CONFTEST: get_user_pages_remote
+    CONFTEST: get_user_pages
+    CONFTEST: drm_gem_object_lookup
+    CONFTEST: drm_atomic_state_ref_counting
+    CONFTEST: drm_driver_has_gem_prime_res_obj
+    CONFTEST: drm_atomic_helper_connector_dpms
+    CONFTEST: drm_connector_funcs_have_mode_in_name
+    CONFTEST: drm_framebuffer_get
+    CONFTEST: drm_dev_put
+    CONFTEST: drm_format_num_planes
+    CONFTEST: drm_connector_for_each_possible_encoder
+    CONFTEST: drm_rotation_available
+    CONFTEST: drm_vma_offset_exact_lookup_locked
+    CONFTEST: nvhost_dma_fence_unpack
+    CONFTEST: is_export_symbol_gpl_of_node_to_nid
+    CONFTEST: is_export_symbol_gpl_sme_active
+    CONFTEST: is_export_symbol_present_swiotlb_map_sg_attrs
+    CONFTEST: is_export_symbol_present_swiotlb_dma_ops
+    CONFTEST: is_export_symbol_present___close_fd
+    CONFTEST: is_export_symbol_present_close_fd
+    CONFTEST: is_export_symbol_present_get_unused_fd
+    CONFTEST: is_export_symbol_present_get_unused_fd_flags
+    CONFTEST: is_export_symbol_present_nvhost_get_default_device
+    CONFTEST: is_export_symbol_present_nvhost_syncpt_unit_interface_get_byte_offset
+    CONFTEST: is_export_symbol_present_nvhost_syncpt_unit_interface_get_aperture
+    CONFTEST: is_export_symbol_present_tegra_dce_register_ipc_client
+    CONFTEST: is_export_symbol_present_tegra_dce_unregister_ipc_client
+    CONFTEST: is_export_symbol_present_tegra_dce_client_ipc_send_recv
+    CONFTEST: is_export_symbol_present_dram_clk_to_mc_clk
+    CONFTEST: is_export_symbol_present_get_dram_num_channels
+    CONFTEST: is_export_symbol_present_tegra_dram_types
+    CONFTEST: is_export_symbol_present_pxm_to_node
+    CONFTEST: is_export_symbol_present_screen_info
+    CONFTEST: is_export_symbol_present_int_active_memcg
+    CONFTEST: is_export_symbol_present_kthread_create_on_node
+    CONFTEST: file_operations
+    CONFTEST: kuid_t
+    CONFTEST: dma_ops
+    CONFTEST: swiotlb_dma_ops
+    CONFTEST: noncoherent_swiotlb_dma_ops
+    CONFTEST: vm_fault_has_address
+    CONFTEST: vm_insert_pfn_prot
+    CONFTEST: vmf_insert_pfn_prot
+    CONFTEST: vm_ops_fault_removed_vma_arg
+    CONFTEST: vmbus_channel_has_ringbuffer_page
+    CONFTEST: device_driver_of_match_table
+    CONFTEST: device_of_node
+    CONFTEST: node_states_n_memory
+    CONFTEST: kmem_cache_has_kobj_remove_work
+    CONFTEST: sysfs_slab_unlink
+    CONFTEST: proc_ops
+    CONFTEST: timespec64
+    CONFTEST: vmalloc_has_pgprot_t_arg
+    CONFTEST: mm_has_mmap_lock
+    CONFTEST: pci_channel_state
+    CONFTEST: pci_dev_has_ats_enabled
+    CONFTEST: remove_memory_has_nid_arg
+    CONFTEST: add_memory_driver_managed_has_mhp_flags_arg
+    CONFTEST: num_registered_fb
+    CONFTEST: address_space
+    CONFTEST: backing_dev_info
+    CONFTEST: mm_context_t
+    CONFTEST: vm_fault_t
+    CONFTEST: mmu_notifier_ops_invalidate_range
+    CONFTEST: migrate_vma_added_flags
+    CONFTEST: make_device_exclusive_range
+    CONFTEST: drm_bus_present
+    CONFTEST: drm_bus_has_bus_type
+    CONFTEST: drm_bus_has_get_irq
+    CONFTEST: drm_bus_has_get_name
+    CONFTEST: drm_driver_has_device_list
+    CONFTEST: drm_driver_has_legacy_dev_list
+    CONFTEST: drm_driver_has_set_busid
+    CONFTEST: drm_crtc_state_has_connectors_changed
+    CONFTEST: drm_init_function_args
+    CONFTEST: drm_helper_mode_fill_fb_struct
+    CONFTEST: drm_master_drop_has_from_release_arg
+    CONFTEST: drm_driver_unload_has_int_return_type
+    CONFTEST: drm_atomic_helper_crtc_destroy_state_has_crtc_arg
+    CONFTEST: drm_atomic_helper_plane_destroy_state_has_plane_arg
+    CONFTEST: drm_mode_object_find_has_file_priv_arg
+    CONFTEST: dma_buf_owner
+    CONFTEST: drm_connector_list_iter
+    CONFTEST: drm_atomic_helper_swap_state_has_stall_arg
+    CONFTEST: drm_driver_prime_flag_present
+    CONFTEST: drm_gem_object_has_resv
+    CONFTEST: drm_crtc_state_has_async_flip
+    CONFTEST: drm_crtc_state_has_pageflip_flags
+    CONFTEST: drm_format_modifiers_present
+    CONFTEST: drm_vma_node_is_allowed_has_tag_arg
+    CONFTEST: drm_vma_offset_node_has_readonly
+    CONFTEST: drm_display_mode_has_vrefresh
+    CONFTEST: drm_driver_master_set_has_int_return_type
+    CONFTEST: drm_driver_has_gem_free_object
+    CONFTEST: drm_prime_pages_to_sg_has_drm_device_arg
+    CONFTEST: drm_driver_has_gem_prime_callbacks
+    CONFTEST: drm_crtc_atomic_check_has_atomic_state_arg
+    CONFTEST: drm_gem_object_vmap_has_map_arg
+    CONFTEST: drm_plane_atomic_check_has_atomic_state_arg
+    CONFTEST: drm_device_has_pdev
+    CONFTEST: drm_crtc_state_has_no_vblank
+    CONFTEST: drm_mode_config_has_allow_fb_modifiers
+    CONFTEST: dma_resv_add_fence
+    CONFTEST: dma_resv_reserve_fences
+    CONFTEST: reservation_object_reserve_shared_has_num_fences_arg
+    CONFTEST: dom0_kernel_present
+    CONFTEST: nvidia_vgpu_kvm_build
+    CONFTEST: nvidia_grid_build
+    CONFTEST: nvidia_grid_csp_build
+    CONFTEST: pm_runtime_available
+    CONFTEST: pci_class_multimedia_hd_audio
+    CONFTEST: drm_available
+    CONFTEST: drm_atomic_available
+    CONFTEST: is_export_symbol_gpl_refcount_inc
+    CONFTEST: is_export_symbol_gpl_refcount_dec_and_test
+    CONFTEST: drm_alpha_blending_available
+    CONFTEST: ib_peer_memory_symbols
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-pci.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-dmabuf.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-acpi.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-cray.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-dma.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-i2c.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-mmap.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-p2p.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-pat.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-procfs.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-procfs-utils.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-usermap.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-vm.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-vtophys.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-interface.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-mlock.o
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-dma.c: In function 'nv_dma_use_map_resource':
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-dma.c:783:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     783 |     const struct dma_map_ops *ops = get_dma_ops(dma_dev->dev);
+         |     ^~~~~
+   In file included from ./include/linux/list.h:9,
+                    from ./include/linux/preempt.h:11,
+                    from ./include/linux/spinlock.h:51,
+                    from /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/common/inc/nv-lock.h:29,
+                    from /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/common/inc/nv-linux.h:32,
+                    from /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-vm.c:26:
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-vm.c: In function 'nv_get_max_sysmem_address':
+   ./include/linux/kernel.h:855:29: warning: comparison of distinct pointer types lacks a cast
+     855 |   (!!(sizeof((typeof(x) *)1 == (typeof(y) *)1)))
+         |                             ^~
+   ./include/linux/kernel.h:869:4: note: in expansion of macro '__typecheck'
+     869 |   (__typecheck(x, y) && __no_side_effects(x, y))
+         |    ^~~~~~~~~~~
+   ./include/linux/kernel.h:879:24: note: in expansion of macro '__safe_cmp'
+     879 |  __builtin_choose_expr(__safe_cmp(x, y), \
+         |                        ^~~~~~~~~~
+   ./include/linux/kernel.h:895:19: note: in expansion of macro '__careful_cmp'
+     895 | #define max(x, y) __careful_cmp(x, y, >)
+         |                   ^~~~~~~~~~~~~
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-vm.c:225:26: note: in expansion of macro 'max'
+     225 |         global_max_pfn = max(global_max_pfn, node_end_pfn(node_id));
+         |                          ^~~
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-pci.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-registry.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-usermap.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-modeset-interface.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-pci-table.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-kthread-q.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-memdbg.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-ibmnpu.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-report-err.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-rsync.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-msi.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-caps.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-frontend.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv_uvm_interface.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nvlink_linux.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nvlink_caps.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/linux_nvswitch.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/procfs_nvswitch.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/i2c_nvswitch.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_common.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_linux.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/nvstatus.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/nvCpuUuid.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/nv-kthread-q.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/nv-kthread-q-selftest.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_tools.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_global.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_gpu.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_gpu_isr.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_procfs.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_va_space.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_va_space_mm.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_gpu_semaphore.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_mem.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_rm_mem.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_channel.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_lock.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_hal.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_range_tree.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_rb_tree.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_range_allocator.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_va_range.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_va_policy.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_va_block.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_range_group.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_gpu_replayable_faults.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_gpu_non_replayable_faults.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_gpu_access_counters.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_events.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_module.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_mmu.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pte_batch.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_tlb_batch.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_push.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pushbuffer.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_thread_context.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_tracker.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_maxwell.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_maxwell_host.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_maxwell_ce.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_maxwell_mmu.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_maxwell_fault_buffer.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_maxwell_access_counter_buffer.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pascal.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pascal_ce.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pascal_host.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pascal_mmu.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pascal_fault_buffer.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_volta_host.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_volta_mmu.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_volta.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_volta_fault_buffer.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_volta_access_counter_buffer.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_turing.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_turing_access_counter_buffer.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_turing_fault_buffer.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_turing_mmu.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_turing_host.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ampere.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ampere_ce.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ampere_host.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ampere_mmu.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_policy.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_utils.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_kvmalloc.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pmm_sysmem.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pmm_gpu.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_migrate.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_populate_pageable.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_migrate_pageable.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_map_external.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_user_channel.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_hmm.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_heuristics.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_thrashing.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_prefetch.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ats.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ats_ibm.o
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pmm_gpu.c: In function 'uvm_pmm_gpu_alloc_kernel':
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pmm_gpu.c:645:16: warning: unused variable 'gpu' [-Wunused-variable]
+     645 |     uvm_gpu_t *gpu = uvm_pmm_to_gpu(pmm);
+         |                ^~~
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ats_faults.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_test_rng.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_range_tree_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_range_allocator_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_gpu_semaphore_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_hmm_sanity_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_mem_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_rm_mem_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_page_tree_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_tracker_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_push_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_channel_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ce_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_host_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_lock_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_utils_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_kvmalloc_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pmm_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pmm_sysmem_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_events_test.o
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_channel_test.c: In function 'test_unexpected_completed_values':
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_channel_test.c:156:15: warning: unused variable 'status' [-Wunused-variable]
+     156 |     NV_STATUS status;
+         |               ^~~~~~
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_module_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_get_rm_ptes_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_fault_buffer_flush_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_peer_identity_mappings_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_va_block_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_range_group_tree_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_thread_context_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_rb_tree_test.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-modeset/nvidia-modeset-linux.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-modeset/nv-kthread-q.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-drv.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-utils.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-encoder.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-connector.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-gem.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-fb.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-modeset.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-prime-fence.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-linux.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-helper.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nv-pci-table.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-gem-nvkms-memory.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-gem-user-memory.o
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c: In function 'cursor_plane_req_config_update':
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c:88:32: warning: unused variable 'nv_drm_plane_state' [-Wunused-variable]
+      88 |     struct nv_drm_plane_state *nv_drm_plane_state =
+         |                                ^~~~~~~~~~~~~~~~~~
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c:87:27: warning: unused variable 'nv_dev' [-Wunused-variable]
+      87 |     struct nv_drm_device *nv_dev = to_nv_device(plane->dev);
+         |                           ^~~~~~
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c: In function 'plane_req_config_update':
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c:189:9: warning: unused variable 'ret' [-Wunused-variable]
+     189 |     int ret = 0;
+         |         ^~~
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c: In function 'nv_drm_plane_atomic_set_property':
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c:504:32: warning: unused variable 'nv_drm_plane_state' [-Wunused-variable]
+     504 |     struct nv_drm_plane_state *nv_drm_plane_state =
+         |                                ^~~~~~~~~~~~~~~~~~
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c: In function 'nv_drm_enumerate_crtcs_and_planes':
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c:1148:13: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+    1148 |             struct drm_plane *overlay_plane =
+         |             ^~~~~~
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-gem-dma-buf.o
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-modeset.c: In function '__will_generate_flip_event':
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-modeset.c:98:10: warning: unused variable 'overlay_event' [-Wunused-variable]
+      98 |     bool overlay_event = false;
+         |          ^~~~~~~~~~~~~
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-modeset.c:97:10: warning: unused variable 'primary_event' [-Wunused-variable]
+      97 |     bool primary_event = false;
+         |          ^~~~~~~~~~~~~
+   /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-modeset.c:96:23: warning: unused variable 'primary_plane' [-Wunused-variable]
+      96 |     struct drm_plane *primary_plane = crtc->primary;
+         |                       ^~~~~~~~~~~~~
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-format.o
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-peermem/nvidia-peermem.o
+     LD [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia.o
+     LD [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-modeset.o
+   ld -r -o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-interface.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-pci.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-dmabuf.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-
+   515.86.01/kernel/nvidia/nv-acpi.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-cray.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-dma.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-i2c.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-mmap.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-p2p.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-pat.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-procfs.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-procfs-utils.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-usermap.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-vm.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-vtophys.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-interface.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-mlock.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-p
+   ci.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-registry.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-usermap.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-modeset-interface.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-pci-table.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-kthread-q.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-memdbg.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-ibmnpu.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-report-err.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-rsync.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-msi.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-caps.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-frontend.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv_uvm_interface.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvi
+   dia/nvlink_linux.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nvlink_caps.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/linux_nvswitch.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/procfs_nvswitch.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/i2c_nvswitch.o
+   ld -r -o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-modeset/nv-modeset-interface.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-modeset/nvidia-modeset-linux.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-modeset/nv-kthread-q.o
+     LD [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.o
+     LD [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm.o
+     LD [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-peermem.o
+     MODPOST /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/Module.symvers
+   FATAL: modpost: GPL-incompatible module nvidia-drm.ko uses GPL-only symbol 'ww_mutex_lock'
+   make[2]: *** [scripts/Makefile.modpost:111: /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/Module.symvers] Error 1
+   make[2]: Target '__modpost' not remade because of errors.
+   make[1]: *** [Makefile:1697: modules] Error 2
+   make[1]: Leaving directory '/usr/src/linux-headers-5.9.1-rt20'
+   make: *** [Makefile:82: modules] Error 2
+-> Error.
+ERROR: An error occurred while performing the step: "Building kernel modules". See /var/log/nvidia-installer.log for details.
+-> The command `cd ./kernel; /usr/bin/make -k -j16  NV_EXCLUDE_KERNEL_MODULES="" SYSSRC="/lib/modules/5.9.1-rt20/build" SYSOUT="/lib/modules/5.9.1-rt20/build"` failed with the following output:
+
+make[1]: Entering directory '/usr/src/linux-headers-5.9.1-rt20'
+scripts/Makefile.lib:8: 'always' is deprecated. Please use 'always-y' instead
+  SYMLINK /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-kernel.o
+  SYMLINK /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-modeset/nv-modeset-kernel.o
+ CONFTEST: hash__remap_4k_pfn
+ CONFTEST: set_pages_uc
+ CONFTEST: list_is_first
+ CONFTEST: set_memory_uc
+ CONFTEST: set_memory_array_uc
+ CONFTEST: set_pages_array_uc
+ CONFTEST: ioremap_cache
+ CONFTEST: ioremap_wc
+ CONFTEST: sg_alloc_table
+ CONFTEST: pci_get_domain_bus_and_slot
+ CONFTEST: get_num_physpages
+ CONFTEST: efi_enabled
+ CONFTEST: pde_data
+ CONFTEST: proc_remove
+ CONFTEST: pm_vt_switch_required
+ CONFTEST: xen_ioemu_inject_msi
+ CONFTEST: phys_to_dma
+ CONFTEST: get_dma_ops
+ CONFTEST: dma_attr_macros
+ CONFTEST: dma_map_page_attrs
+ CONFTEST: write_cr4
+ CONFTEST: of_get_property
+ CONFTEST: of_find_node_by_phandle
+ CONFTEST: of_node_to_nid
+ CONFTEST: pnv_pci_get_npu_dev
+ CONFTEST: of_get_ibm_chip_id
+ CONFTEST: pci_bus_address
+ CONFTEST: pci_stop_and_remove_bus_device
+ CONFTEST: pci_remove_bus_device
+ CONFTEST: register_cpu_notifier
+ CONFTEST: cpuhp_setup_state
+ CONFTEST: dma_map_resource
+ CONFTEST: get_backlight_device_by_name
+ CONFTEST: timer_setup
+ CONFTEST: pci_enable_msix_range
+ CONFTEST: kernel_read_has_pointer_pos_arg
+ CONFTEST: kernel_write
+ CONFTEST: kthread_create_on_node
+ CONFTEST: of_find_matching_node
+ CONFTEST: dev_is_pci
+ CONFTEST: dma_direct_map_resource
+ CONFTEST: tegra_get_platform
+ CONFTEST: tegra_bpmp_send_receive
+ CONFTEST: flush_cache_all
+ CONFTEST: vmf_insert_pfn
+ CONFTEST: jiffies_to_timespec
+ CONFTEST: ktime_get_raw_ts64
+ CONFTEST: ktime_get_real_ts64
+ CONFTEST: full_name_hash
+ CONFTEST: hlist_for_each_entry
+ CONFTEST: pci_enable_atomic_ops_to_root
+ CONFTEST: vga_tryget
+ CONFTEST: pgprot_decrypted
+ CONFTEST: cc_mkdec
+ CONFTEST: iterate_fd
+ CONFTEST: seq_read_iter
+ CONFTEST: sg_page_iter_page
+ CONFTEST: unsafe_follow_pfn
+ CONFTEST: drm_gem_object_get
+ CONFTEST: drm_gem_object_put_unlocked
+ CONFTEST: set_close_on_exec
+ CONFTEST: add_memory_driver_managed
+ CONFTEST: device_property_read_u64
+ CONFTEST: devm_of_platform_populate
+ CONFTEST: of_dma_configure
+ CONFTEST: of_property_count_elems_of_size
+ CONFTEST: of_property_read_variable_u8_array
+ CONFTEST: i2c_new_client_device
+ CONFTEST: i2c_unregister_device
+ CONFTEST: of_get_named_gpio
+ CONFTEST: devm_gpio_request_one
+ CONFTEST: gpio_direction_input
+ CONFTEST: gpio_direction_output
+ CONFTEST: gpio_get_value
+ CONFTEST: gpio_set_value
+ CONFTEST: gpio_to_irq
+ CONFTEST: icc_get
+ CONFTEST: icc_set_bw
+ CONFTEST: icc_put
+ CONFTEST: dma_buf_export_args
+ CONFTEST: dma_buf_ops_has_kmap
+ CONFTEST: dma_buf_ops_has_kmap_atomic
+ CONFTEST: dma_buf_ops_has_map
+ CONFTEST: dma_buf_ops_has_map_atomic
+ CONFTEST: dma_buf_has_dynamic_attachment
+ CONFTEST: dma_buf_attachment_has_peer2peer
+ CONFTEST: dma_set_mask_and_coherent
+ CONFTEST: get_task_ioprio
+ CONFTEST: address_space_init_once
+ CONFTEST: vzalloc
+ CONFTEST: wait_on_bit_lock_argument_count
+ CONFTEST: bitmap_clear
+ CONFTEST: usleep_range
+ CONFTEST: radix_tree_empty
+ CONFTEST: radix_tree_replace_slot
+ CONFTEST: pnv_npu2_init_context
+ CONFTEST: cpumask_of_node
+ CONFTEST: ioasid_get
+ CONFTEST: migrate_vma_setup
+ CONFTEST: acpi_video_backlight_use_native
+ CONFTEST: drm_dev_unref
+ CONFTEST: drm_reinit_primary_mode_group
+ CONFTEST: get_user_pages_remote
+ CONFTEST: get_user_pages
+ CONFTEST: drm_gem_object_lookup
+ CONFTEST: drm_atomic_state_ref_counting
+ CONFTEST: drm_driver_has_gem_prime_res_obj
+ CONFTEST: drm_atomic_helper_connector_dpms
+ CONFTEST: drm_connector_funcs_have_mode_in_name
+ CONFTEST: drm_framebuffer_get
+ CONFTEST: drm_dev_put
+ CONFTEST: drm_format_num_planes
+ CONFTEST: drm_connector_for_each_possible_encoder
+ CONFTEST: drm_rotation_available
+ CONFTEST: drm_vma_offset_exact_lookup_locked
+ CONFTEST: nvhost_dma_fence_unpack
+ CONFTEST: is_export_symbol_gpl_of_node_to_nid
+ CONFTEST: is_export_symbol_gpl_sme_active
+ CONFTEST: is_export_symbol_present_swiotlb_map_sg_attrs
+ CONFTEST: is_export_symbol_present_swiotlb_dma_ops
+ CONFTEST: is_export_symbol_present___close_fd
+ CONFTEST: is_export_symbol_present_close_fd
+ CONFTEST: is_export_symbol_present_get_unused_fd
+ CONFTEST: is_export_symbol_present_get_unused_fd_flags
+ CONFTEST: is_export_symbol_present_nvhost_get_default_device
+ CONFTEST: is_export_symbol_present_nvhost_syncpt_unit_interface_get_byte_offset
+ CONFTEST: is_export_symbol_present_nvhost_syncpt_unit_interface_get_aperture
+ CONFTEST: is_export_symbol_present_tegra_dce_register_ipc_client
+ CONFTEST: is_export_symbol_present_tegra_dce_unregister_ipc_client
+ CONFTEST: is_export_symbol_present_tegra_dce_client_ipc_send_recv
+ CONFTEST: is_export_symbol_present_dram_clk_to_mc_clk
+ CONFTEST: is_export_symbol_present_get_dram_num_channels
+ CONFTEST: is_export_symbol_present_tegra_dram_types
+ CONFTEST: is_export_symbol_present_pxm_to_node
+ CONFTEST: is_export_symbol_present_screen_info
+ CONFTEST: is_export_symbol_present_int_active_memcg
+ CONFTEST: is_export_symbol_present_kthread_create_on_node
+ CONFTEST: file_operations
+ CONFTEST: kuid_t
+ CONFTEST: dma_ops
+ CONFTEST: swiotlb_dma_ops
+ CONFTEST: noncoherent_swiotlb_dma_ops
+ CONFTEST: vm_fault_has_address
+ CONFTEST: vm_insert_pfn_prot
+ CONFTEST: vmf_insert_pfn_prot
+ CONFTEST: vm_ops_fault_removed_vma_arg
+ CONFTEST: vmbus_channel_has_ringbuffer_page
+ CONFTEST: device_driver_of_match_table
+ CONFTEST: device_of_node
+ CONFTEST: node_states_n_memory
+ CONFTEST: kmem_cache_has_kobj_remove_work
+ CONFTEST: sysfs_slab_unlink
+ CONFTEST: proc_ops
+ CONFTEST: timespec64
+ CONFTEST: vmalloc_has_pgprot_t_arg
+ CONFTEST: mm_has_mmap_lock
+ CONFTEST: pci_channel_state
+ CONFTEST: pci_dev_has_ats_enabled
+ CONFTEST: remove_memory_has_nid_arg
+ CONFTEST: add_memory_driver_managed_has_mhp_flags_arg
+ CONFTEST: num_registered_fb
+ CONFTEST: address_space
+ CONFTEST: backing_dev_info
+ CONFTEST: mm_context_t
+ CONFTEST: vm_fault_t
+ CONFTEST: mmu_notifier_ops_invalidate_range
+ CONFTEST: migrate_vma_added_flags
+ CONFTEST: make_device_exclusive_range
+ CONFTEST: drm_bus_present
+ CONFTEST: drm_bus_has_bus_type
+ CONFTEST: drm_bus_has_get_irq
+ CONFTEST: drm_bus_has_get_name
+ CONFTEST: drm_driver_has_device_list
+ CONFTEST: drm_driver_has_legacy_dev_list
+ CONFTEST: drm_driver_has_set_busid
+ CONFTEST: drm_crtc_state_has_connectors_changed
+ CONFTEST: drm_init_function_args
+ CONFTEST: drm_helper_mode_fill_fb_struct
+ CONFTEST: drm_master_drop_has_from_release_arg
+ CONFTEST: drm_driver_unload_has_int_return_type
+ CONFTEST: drm_atomic_helper_crtc_destroy_state_has_crtc_arg
+ CONFTEST: drm_atomic_helper_plane_destroy_state_has_plane_arg
+ CONFTEST: drm_mode_object_find_has_file_priv_arg
+ CONFTEST: dma_buf_owner
+ CONFTEST: drm_connector_list_iter
+ CONFTEST: drm_atomic_helper_swap_state_has_stall_arg
+ CONFTEST: drm_driver_prime_flag_present
+ CONFTEST: drm_gem_object_has_resv
+ CONFTEST: drm_crtc_state_has_async_flip
+ CONFTEST: drm_crtc_state_has_pageflip_flags
+ CONFTEST: drm_format_modifiers_present
+ CONFTEST: drm_vma_node_is_allowed_has_tag_arg
+ CONFTEST: drm_vma_offset_node_has_readonly
+ CONFTEST: drm_display_mode_has_vrefresh
+ CONFTEST: drm_driver_master_set_has_int_return_type
+ CONFTEST: drm_driver_has_gem_free_object
+ CONFTEST: drm_prime_pages_to_sg_has_drm_device_arg
+ CONFTEST: drm_driver_has_gem_prime_callbacks
+ CONFTEST: drm_crtc_atomic_check_has_atomic_state_arg
+ CONFTEST: drm_gem_object_vmap_has_map_arg
+ CONFTEST: drm_plane_atomic_check_has_atomic_state_arg
+ CONFTEST: drm_device_has_pdev
+ CONFTEST: drm_crtc_state_has_no_vblank
+ CONFTEST: drm_mode_config_has_allow_fb_modifiers
+ CONFTEST: dma_resv_add_fence
+ CONFTEST: dma_resv_reserve_fences
+ CONFTEST: reservation_object_reserve_shared_has_num_fences_arg
+ CONFTEST: dom0_kernel_present
+ CONFTEST: nvidia_vgpu_kvm_build
+ CONFTEST: nvidia_grid_build
+ CONFTEST: nvidia_grid_csp_build
+ CONFTEST: pm_runtime_available
+ CONFTEST: pci_class_multimedia_hd_audio
+ CONFTEST: drm_available
+ CONFTEST: drm_atomic_available
+ CONFTEST: is_export_symbol_gpl_refcount_inc
+ CONFTEST: is_export_symbol_gpl_refcount_dec_and_test
+ CONFTEST: drm_alpha_blending_available
+ CONFTEST: ib_peer_memory_symbols
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-pci.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-dmabuf.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-acpi.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-cray.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-dma.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-i2c.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-mmap.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-p2p.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-pat.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-procfs.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-procfs-utils.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-usermap.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-vm.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-vtophys.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-interface.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-mlock.o
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-dma.c: In function 'nv_dma_use_map_resource':
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-dma.c:783:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  783 |     const struct dma_map_ops *ops = get_dma_ops(dma_dev->dev);
+      |     ^~~~~
+In file included from ./include/linux/list.h:9,
+                 from ./include/linux/preempt.h:11,
+                 from ./include/linux/spinlock.h:51,
+                 from /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/common/inc/nv-lock.h:29,
+                 from /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/common/inc/nv-linux.h:32,
+                 from /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-vm.c:26:
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-vm.c: In function 'nv_get_max_sysmem_address':
+./include/linux/kernel.h:855:29: warning: comparison of distinct pointer types lacks a cast
+  855 |   (!!(sizeof((typeof(x) *)1 == (typeof(y) *)1)))
+      |                             ^~
+./include/linux/kernel.h:869:4: note: in expansion of macro '__typecheck'
+  869 |   (__typecheck(x, y) && __no_side_effects(x, y))
+      |    ^~~~~~~~~~~
+./include/linux/kernel.h:879:24: note: in expansion of macro '__safe_cmp'
+  879 |  __builtin_choose_expr(__safe_cmp(x, y), \
+      |                        ^~~~~~~~~~
+./include/linux/kernel.h:895:19: note: in expansion of macro '__careful_cmp'
+  895 | #define max(x, y) __careful_cmp(x, y, >)
+      |                   ^~~~~~~~~~~~~
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-vm.c:225:26: note: in expansion of macro 'max'
+  225 |         global_max_pfn = max(global_max_pfn, node_end_pfn(node_id));
+      |                          ^~~
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-pci.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-registry.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-usermap.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-modeset-interface.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-pci-table.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-kthread-q.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-memdbg.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-ibmnpu.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-report-err.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-rsync.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-msi.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-caps.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-frontend.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv_uvm_interface.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nvlink_linux.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nvlink_caps.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/linux_nvswitch.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/procfs_nvswitch.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/i2c_nvswitch.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_common.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_linux.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/nvstatus.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/nvCpuUuid.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/nv-kthread-q.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/nv-kthread-q-selftest.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_tools.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_global.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_gpu.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_gpu_isr.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_procfs.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_va_space.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_va_space_mm.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_gpu_semaphore.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_mem.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_rm_mem.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_channel.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_lock.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_hal.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_range_tree.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_rb_tree.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_range_allocator.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_va_range.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_va_policy.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_va_block.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_range_group.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_gpu_replayable_faults.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_gpu_non_replayable_faults.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_gpu_access_counters.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_events.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_module.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_mmu.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pte_batch.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_tlb_batch.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_push.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pushbuffer.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_thread_context.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_tracker.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_maxwell.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_maxwell_host.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_maxwell_ce.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_maxwell_mmu.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_maxwell_fault_buffer.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_maxwell_access_counter_buffer.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pascal.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pascal_ce.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pascal_host.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pascal_mmu.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pascal_fault_buffer.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_volta_host.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_volta_mmu.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_volta.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_volta_fault_buffer.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_volta_access_counter_buffer.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_turing.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_turing_access_counter_buffer.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_turing_fault_buffer.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_turing_mmu.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_turing_host.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ampere.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ampere_ce.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ampere_host.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ampere_mmu.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_policy.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_utils.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_kvmalloc.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pmm_sysmem.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pmm_gpu.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_migrate.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_populate_pageable.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_migrate_pageable.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_map_external.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_user_channel.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_hmm.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_heuristics.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_thrashing.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_prefetch.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ats.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ats_ibm.o
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pmm_gpu.c: In function 'uvm_pmm_gpu_alloc_kernel':
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pmm_gpu.c:645:16: warning: unused variable 'gpu' [-Wunused-variable]
+  645 |     uvm_gpu_t *gpu = uvm_pmm_to_gpu(pmm);
+      |                ^~~
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ats_faults.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_test_rng.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_range_tree_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_range_allocator_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_gpu_semaphore_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_hmm_sanity_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_mem_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_rm_mem_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_page_tree_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_tracker_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_push_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_channel_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_ce_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_host_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_lock_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_utils_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_kvmalloc_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pmm_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_pmm_sysmem_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_events_test.o
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_channel_test.c: In function 'test_unexpected_completed_values':
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_channel_test.c:156:15: warning: unused variable 'status' [-Wunused-variable]
+  156 |     NV_STATUS status;
+      |               ^~~~~~
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_perf_module_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_get_rm_ptes_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_fault_buffer_flush_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_peer_identity_mappings_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_va_block_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_range_group_tree_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_thread_context_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm/uvm_rb_tree_test.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-modeset/nvidia-modeset-linux.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-modeset/nv-kthread-q.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-drv.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-utils.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-encoder.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-connector.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-gem.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-fb.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-modeset.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-prime-fence.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-linux.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-helper.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nv-pci-table.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-gem-nvkms-memory.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-gem-user-memory.o
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c: In function 'cursor_plane_req_config_update':
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c:88:32: warning: unused variable 'nv_drm_plane_state' [-Wunused-variable]
+   88 |     struct nv_drm_plane_state *nv_drm_plane_state =
+      |                                ^~~~~~~~~~~~~~~~~~
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c:87:27: warning: unused variable 'nv_dev' [-Wunused-variable]
+   87 |     struct nv_drm_device *nv_dev = to_nv_device(plane->dev);
+      |                           ^~~~~~
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c: In function 'plane_req_config_update':
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c:189:9: warning: unused variable 'ret' [-Wunused-variable]
+  189 |     int ret = 0;
+      |         ^~~
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c: In function 'nv_drm_plane_atomic_set_property':
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c:504:32: warning: unused variable 'nv_drm_plane_state' [-Wunused-variable]
+  504 |     struct nv_drm_plane_state *nv_drm_plane_state =
+      |                                ^~~~~~~~~~~~~~~~~~
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c: In function 'nv_drm_enumerate_crtcs_and_planes':
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-crtc.c:1148:13: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ 1148 |             struct drm_plane *overlay_plane =
+      |             ^~~~~~
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-gem-dma-buf.o
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-modeset.c: In function '__will_generate_flip_event':
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-modeset.c:98:10: warning: unused variable 'overlay_event' [-Wunused-variable]
+   98 |     bool overlay_event = false;
+      |          ^~~~~~~~~~~~~
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-modeset.c:97:10: warning: unused variable 'primary_event' [-Wunused-variable]
+   97 |     bool primary_event = false;
+      |          ^~~~~~~~~~~~~
+/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-modeset.c:96:23: warning: unused variable 'primary_plane' [-Wunused-variable]
+   96 |     struct drm_plane *primary_plane = crtc->primary;
+      |                       ^~~~~~~~~~~~~
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm/nvidia-drm-format.o
+  CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-peermem/nvidia-peermem.o
+  LD [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia.o
+  LD [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-modeset.o
+ld -r -o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-interface.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-pci.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-dmabuf.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-acpi.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-cray.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-dma.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-i2c.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-mmap.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-p2p.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-pat.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-procfs.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-procfs-utils.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-usermap.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-vm.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-vtophys.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-interface.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-mlock.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-pci.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-registry.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/os-usermap.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-modeset-interface.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-pci-table.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-kthread-q.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-memdbg.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-ibmnpu.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-report-err.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-rsync.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-msi.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-caps.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv-frontend.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nv_uvm_interface.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nvlink_linux.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/nvlink_caps.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/linux_nvswitch.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/procfs_nvswitch.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia/i2c_nvswitch.o
+ld -r -o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-modeset/nv-modeset-interface.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-modeset/nvidia-modeset-linux.o /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-modeset/nv-kthread-q.o
+  LD [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.o
+  LD [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-drm.o
+  LD [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-peermem.o
+  MODPOST /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/Module.symvers
+FATAL: modpost: GPL-incompatible module nvidia-drm.ko uses GPL-only symbol 'ww_mutex_lock'
+make[2]: *** [scripts/Makefile.modpost:111: /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/Module.symvers] Error 1
+make[2]: Target '__modpost' not remade because of errors.
+make[1]: *** [Makefile:1697: modules] Error 2
+make[1]: Leaving directory '/usr/src/linux-headers-5.9.1-rt20'
+make: *** [Makefile:82: modules] Error 2
+-> Checking to see whether the nvidia kernel module was successfully built
+   executing: 'cd ./kernel; /usr/bin/make -k -j16 NV_KERNEL_MODULES="nvidia" NV_EXCLUDE_KERNEL_MODULES="" SYSSRC="/lib/modules/5.9.1-rt20/build" SYSOUT="/lib/modules/5.9.1-rt20/build"'...
+   make[1]: Entering directory '/usr/src/linux-headers-5.9.1-rt20'
+   scripts/Makefile.lib:8: 'always' is deprecated. Please use 'always-y' instead
+     MODPOST /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/Module.symvers
+     CC [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia.mod.o
+     LD [M]  /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia.ko
+   make[1]: Leaving directory '/usr/src/linux-headers-5.9.1-rt20'
+-> done.
+-> Checking to see whether the nvidia-uvm kernel module was successfully built
+   executing: 'cd ./kernel; /usr/bin/make -k -j16 NV_KERNEL_MODULES="nvidia-uvm" NV_EXCLUDE_KERNEL_MODULES="" SYSSRC="/lib/modules/5.9.1-rt20/build" SYSOUT="/lib/modules/5.9.1-rt20/build"'...
+   make[1]: Entering directory '/usr/src/linux-headers-5.9.1-rt20'
+     MODPOST /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/Module.symvers
+   ERROR: modpost: "nvUvmInterfaceSessionCreate" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfacePmaAllocPages" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceDupAllocation" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfacePmaUnregisterEvictionCallbacks" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceEnableAccessCntr" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceGetP2PCaps" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceChannelAllocate" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfacePmaPinPages" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceRegisterUvmCallbacks" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceAddressSpaceDestroy" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceUnregisterGpu" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceAddressSpaceCreate" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceDeviceDestroy" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceDupMemory" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceSessionDestroy" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceGetPmaObject" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceGetChannelResourcePtes" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceP2pObjectCreate" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceGetEccInfo" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfacePmaRegisterEvictionCallbacks" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceMemoryFree" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceFreeDupedHandle" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceDeRegisterUvmOps" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceServiceDeviceInterruptsRM" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceDeviceCreate" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfacePagingChannelDestroy" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceInitFaultInfo" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceBindChannelResources" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceGetGpuInfo" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceReportNonReplayableFault" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceQueryCopyEnginesCaps" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceMemoryAllocFB" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceDestroyFaultInfo" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceStopChannel" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfacePagingChannelsUnmap" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceDestroyAccessCntrInfo" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceHasPendingNonReplayableFaults" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceRetainChannel" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceGetFbInfo" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceGetNonReplayableFaults" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceP2pObjectDestroy" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceRegisterGpu" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceGetExternalAllocPtes" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceDupAddressSpace" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfacePagingChannelPushStream" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceOwnPageFaultIntr" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceMemoryCpuUnMap" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceSetPageDirectory" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfacePagingChannelsMap" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfacePmaFreePages" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfacePagingChannelAllocate" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceMemoryCpuMap" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceMemoryAllocSys" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceReleaseChannel" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceInitAccessCntrInfo" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceUnsetPageDirectory" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceQueryCaps" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceChannelDestroy" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   ERROR: modpost: "nvUvmInterfaceDisableAccessCntr" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+   make[2]: *** [scripts/Makefile.modpost:111: /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/Module.symvers] Error 1
+   make[2]: *** Deleting file '/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/Module.symvers'
+   make[2]: Target '__modpost' not remade because of errors.
+   make[1]: *** [Makefile:1697: modules] Error 2
+   make[1]: Leaving directory '/usr/src/linux-headers-5.9.1-rt20'
+   make: *** [Makefile:82: modules] Error 2
+-> Error.
+ERROR: An error occurred while performing the step: "Checking to see whether the nvidia-uvm kernel module was successfully built". See /var/log/nvidia-installer.log for details.
+-> The command `cd ./kernel; /usr/bin/make -k -j16 NV_KERNEL_MODULES="nvidia-uvm" NV_EXCLUDE_KERNEL_MODULES="" SYSSRC="/lib/modules/5.9.1-rt20/build" SYSOUT="/lib/modules/5.9.1-rt20/build"` failed with the following output:
+
+make[1]: Entering directory '/usr/src/linux-headers-5.9.1-rt20'
+  MODPOST /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/Module.symvers
+ERROR: modpost: "nvUvmInterfaceSessionCreate" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfacePmaAllocPages" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceDupAllocation" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfacePmaUnregisterEvictionCallbacks" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceEnableAccessCntr" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceGetP2PCaps" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceChannelAllocate" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfacePmaPinPages" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceRegisterUvmCallbacks" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceAddressSpaceDestroy" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceUnregisterGpu" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceAddressSpaceCreate" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceDeviceDestroy" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceDupMemory" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceSessionDestroy" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceGetPmaObject" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceGetChannelResourcePtes" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceP2pObjectCreate" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceGetEccInfo" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfacePmaRegisterEvictionCallbacks" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceMemoryFree" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceFreeDupedHandle" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceDeRegisterUvmOps" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceServiceDeviceInterruptsRM" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceDeviceCreate" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfacePagingChannelDestroy" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceInitFaultInfo" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceBindChannelResources" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceGetGpuInfo" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceReportNonReplayableFault" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceQueryCopyEnginesCaps" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceMemoryAllocFB" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceDestroyFaultInfo" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceStopChannel" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfacePagingChannelsUnmap" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceDestroyAccessCntrInfo" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceHasPendingNonReplayableFaults" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceRetainChannel" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceGetFbInfo" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceGetNonReplayableFaults" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceP2pObjectDestroy" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceRegisterGpu" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceGetExternalAllocPtes" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceDupAddressSpace" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfacePagingChannelPushStream" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceOwnPageFaultIntr" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceMemoryCpuUnMap" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceSetPageDirectory" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfacePagingChannelsMap" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfacePmaFreePages" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfacePagingChannelAllocate" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceMemoryCpuMap" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceMemoryAllocSys" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceReleaseChannel" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceInitAccessCntrInfo" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceUnsetPageDirectory" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceQueryCaps" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceChannelDestroy" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+ERROR: modpost: "nvUvmInterfaceDisableAccessCntr" [/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/nvidia-uvm.ko] undefined!
+make[2]: *** [scripts/Makefile.modpost:111: /tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/Module.symvers] Error 1
+make[2]: *** Deleting file '/tmp/selfgz4005/NVIDIA-Linux-x86_64-515.86.01/kernel/Module.symvers'
+make[2]: Target '__modpost' not remade because of errors.
+make[1]: *** [Makefile:1697: modules] Error 2
+make[1]: Leaving directory '/usr/src/linux-headers-5.9.1-rt20'
+make: *** [Makefile:82: modules] Error 2
+ERROR: The nvidia-uvm kernel module was not created.
+ERROR: The nvidia-uvm kernel module failed to build. This kernel module is required for the proper operation of CUDA. If you do not need to use CUDA, you can try to install this driver package again with the '--no-unified-memory' option.
+ERROR: Installation has failed.  Please see the file '/var/log/nvidia-installer.log' for details.  You may find suggestions on fixing installation problems in the README available on the Linux driver download page at www.nvidia.com.
